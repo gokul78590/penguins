@@ -1,0 +1,18 @@
+---
+title: "gold"
+output: html_document
+date: "2024-01-14"
+---
+
+```{r}
+library(palmerpenguins)
+library(tidyverse)
+d=data.frame(penguins)
+  ggplot(data=d,mapping = aes(x=flipper_length_mm,y=body_mass_g))+geom_point(mapping = aes(colour=species,shape=species))+geom_smooth(method = lm)
+```
+
+
+```{r}
+ggplot(data=d,mapping = aes(x=species,y=island))+geom_point(mapping = aes(colour=species,shape=species))+geom_smooth(method = lm)
+```
+
